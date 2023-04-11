@@ -1,0 +1,275 @@
+<%- include ("../layouts/cabecera.ejs")%>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeekMania</title>
+  <!--LINKS-->
+  <link rel="shortcut icon" href="/images/logo/logogeek.png" type="image/x-icon">
+  <!--custom css link-->
+  <link rel="stylesheet" href="/stylesheets/style-prefix.css">
+  <!--GOOGLE FONT-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/cdad6d9352.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="overlay" data-overlay></div>
+
+  <!--HEADER-->
+
+  <header>
+    
+
+    <div class="header-main">
+
+      <div class="container">
+        <a href="#" class="header-logo">
+          <img src="/images/logo/logogeek.png" alt="" width="120" height="36">
+        </a>
+
+        </div>
+
+ 
+
+    </div>
+
+  
+
+    <nav class="desktop-navigation-menu">
+
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <li class="menu-category">
+            <a href="/inicio" class="menu-title">Inicio</a>
+          </li>
+          <li class="menu-category">
+            <a href="/mostrarProductos" class="menu-title">Productos</a>
+
+          </li>
+
+          <li class="menu-category">
+            <a href="/nosotros" class="menu-title">Nosotros</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="/productos"><i class="fa-solid fa-user"></i>Administrar</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+  
+  </header>
+
+<br>
+<div>
+    <center><h1>PRODUCTOS DISPONIBLES</h1></center>
+</div>
+<br>
+<br>
+
+
+
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="/images/<%=coleccionable[0].imagen%>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%=coleccionable[0].nombre%></h5>
+          <p class="card-text"><h6>Descripción: </h6><%=coleccionable[0].descripcion%></p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Categoría:<%=coleccionable[0].categoria%></li>
+            <li class="list-group-item">Cantidad:<%=coleccionable[0].cantidad%></li>
+            <li class="list-group-item">Precio:<%=coleccionable[0].precio%></li>
+          </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="/images/<%=coleccionable[1].imagen%>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%=coleccionable[1].nombre%></h5>
+          <p class="card-text"><h6>Descripción: </h6><%=coleccionable[1].descripcion%></p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Categoría:<%=coleccionable[1].categoria%></li>
+            <li class="list-group-item">Cantidad:<%=coleccionable[1].cantidad%></li>
+            <li class="list-group-item">Precio:<%=coleccionable[1].precio%></li>
+          </ul>
+      </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+          <img src="/images/<%=coleccionable[2].imagen%>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%=coleccionable[2].nombre%></h5>
+            <p class="card-text"><h6>Descripción: </h6><%=coleccionable[2].descripcion%></p>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">Categoría:<%=coleccionable[2].categoria%></li>
+              <li class="list-group-item">Cantidad:<%=coleccionable[2].cantidad%></li>
+              <li class="list-group-item">Precio:<%=coleccionable[2].precio%></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+          <img src="/images/<%=coleccionable[3].imagen%>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%=coleccionable[3].nombre%></h5>
+            <p class="card-text"><h6>Descripción: </h6><%=coleccionable[3].descripcion%></p>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">Categoría:<%=coleccionable[3].categoria%></li>
+              <li class="list-group-item">Cantidad:<%=coleccionable[3].cantidad%></li>
+              <li class="list-group-item">Precio:<%=coleccionable[3].precio%></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+          <img src="/images/<%=coleccionable[4].imagen%>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%=coleccionable[4].nombre%></h5>
+            <p class="card-text"><h6>Descripción: </h6><%=coleccionable[4].descripcion%></p>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">Categoría:<%=coleccionable[4].categoria%></li>
+              <li class="list-group-item">Cantidad:<%=coleccionable[4].cantidad%></li>
+              <li class="list-group-item">Precio:<%=coleccionable[4].precio%></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+          <img src="/images/<%=coleccionable[5].imagen%>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%=coleccionable[5].nombre%></h5>
+            <p class="card-text"><h6>Descripción: </h6><%=coleccionable[5].descripcion%></p>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">Categoría:<%=coleccionable[5].categoria%></li>
+              <li class="list-group-item">Cantidad:<%=coleccionable[5].cantidad%></li>
+              <li class="list-group-item">Precio:<%=coleccionable[5].precio%></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+          <img src="/images/<%=coleccionable[6].imagen%>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%=coleccionable[6].nombre%></h5>
+            <p class="card-text"><h6>Descripción: </h6><%=coleccionable[6].descripcion%></p>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">Categoría:<%=coleccionable[6].categoria%></li>
+              <li class="list-group-item">Cantidad:<%=coleccionable[6].cantidad%></li>
+              <li class="list-group-item">Precio:<%=coleccionable[6].precio%></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+          <img src="/images/<%=coleccionable[7].imagen%>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%=coleccionable[7].nombre%></h5>
+            <p class="card-text"><h6>Descripción: </h6><%=coleccionable[7].descripcion%></p>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">Categoría:<%=coleccionable[7].categoria%></li>
+              <li class="list-group-item">Cantidad:<%=coleccionable[7].cantidad%></li>
+              <li class="list-group-item">Precio:<%=coleccionable[7].precio%></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+          <img src="/images/<%=coleccionable[8].imagen%>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%=coleccionable[8].nombre%></h5>
+            <p class="card-text"><h6>Descripción: </h6><%=coleccionable[8].descripcion%></p>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">Categoría:<%=coleccionable[8].categoria%></li>
+              <li class="list-group-item">Cantidad:<%=coleccionable[8].cantidad%></li>
+              <li class="list-group-item">Precio:<%=coleccionable[8].precio%></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+          <img src="/images/<%=coleccionable[9].imagen%>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%=coleccionable[9].nombre%></h5>
+            <p class="card-text"><h6>Descripción: </h6><%=coleccionable[9].descripcion%></p>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">Categoría:<%=coleccionable[9].categoria%></li>
+              <li class="list-group-item">Cantidad:<%=coleccionable[9].cantidad%></li>
+              <li class="list-group-item">Precio:<%=coleccionable[9].precio%></li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+      <div class="footer-nav">
+  
+        <div class="container">
+  
+          <ul class="footer-nav-list">
+  
+            <li class="footer-nav-item">
+              <h2 class="nav-title">Contactos</h2>
+            </li>
+  
+            <li class="footer-nav-item">
+              <h5 style="color: white;">56 12345678/h5>
+            </li>
+  
+            <li class="footer-nav-item">
+              <h5 style="color: white;">Ubicación</h5>
+            </li>
+  
+            <li class="footer-nav-item">
+              <h5 style="color: white;">bigfernand1@hotmail.com</h5>
+            </li>
+  
+  
+          </ul>
+  
+          <ul class="footer-nav-list">
+          
+            
+          
+          </ul>
+  
+          <ul class="footer-nav-list">
+  
+            <li class="footer-nav-item">
+              <h2 class="nav-title">Caterorias</h2>
+            </li>
+  
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Funkos</a>
+            </li>
+  
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Funkos</a>
+            </li>
+  
+         
+        </div>
+      </div>
+    </footer>

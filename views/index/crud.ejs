@@ -1,0 +1,115 @@
+<%- include ("../layouts/cabecera.ejs")%>
+<script src="https://kit.fontawesome.com/cdad6d9352.js" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeekMania</title>
+    <!--LINKS-->
+    <link rel="shortcut icon" href="/images/logo/logogeek.png" type="image/x-icon">
+    <!--custom css link-->
+    <link rel="stylesheet" href="/stylesheets/style-prefix.css">
+    <!--GOOGLE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cdad6d9352.js" crossorigin="anonymous"></script>
+  </head>
+  
+  <body>
+    <div class="overlay" data-overlay></div>
+  
+    <!--HEADER-->
+  
+    <header>
+      
+  
+      <div class="header-main">
+  
+        <div class="container">
+          <a href="#" class="header-logo">
+            <img src="/images/logo/logogeek.png" alt="" width="120" height="36">
+          </a>
+  
+          </div>
+  
+   
+  
+      </div>
+  
+    
+  
+      <nav class="desktop-navigation-menu">
+  
+        <div class="container">
+          <ul class="desktop-menu-category-list">
+            <li class="menu-category">
+              <a href="/inicio" class="menu-title">Inicio</a>
+            </li>
+            <li class="menu-category">
+              <a href="/mostrarProductos" class="menu-title">Productos</a>
+  
+            </li>
+  
+            <li class="menu-category">
+              <a href="/nosotros" class="menu-title">Nosotros</a>
+            </li>
+  
+            <li class="menu-category">
+              <a href="/productos"><i class="fa-solid fa-user"></i>Administrar</a>
+            </li>
+  
+          </ul>
+  
+        </div>
+  
+      </nav>
+    
+    </header>
+  
+
+
+<br>
+<a href="/mostrar" class="btn btn-secondary" type="button">Registrar</a>
+<br>
+<br>
+<table class="table table-light">
+    <thead class="thead-light">
+        <tr>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Categoria</th>
+            <th>Cantidad</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Imagen</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for( let i= 0; i< coleccionable.length; i++ ) { %>
+            <tr>
+                <td><%=coleccionable[i].id %></td> 
+                <td><%=coleccionable[i].nombre %></td>
+                <td><%=coleccionable[i].categoria %></td>
+                <td><%=coleccionable[i].cantidad %></td> 
+                <td><%=coleccionable[i].descripcion %></td> 
+                <td><%=coleccionable[i].precio %></td>
+                <td> <img class="img-thumbnail" width="100" src="images/<%=coleccionable[i].imagen%>" alt=""></td>
+                <td>
+                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                        <form class="form-inline" method="get" action="editar/<%=coleccionable[i].id %>">
+                            <button class="fa-solid fa-pen-to-square" style="color: #267792" type="submit"></button>
+                        </form>
+                    </div>
+                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                        <form class="form-inline" method="post" action="eliminar/<%=coleccionable[i].id %>">
+                            <button class="fa-solid fa-trash-can" style="color: #ff0000" type="submit"></button>
+                        </form>
+                    </div><br>
+                    
+                </td>
+            </tr>
+        <% } %>
+    </tbody>
+</table> 
